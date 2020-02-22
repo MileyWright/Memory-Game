@@ -4,7 +4,7 @@
   "description": "Application that puts your memory to the test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cross-env DB_ENV=testing jest --watch",
     "server": "nodemon index.js",
     "start": "mode index.js"
   },
@@ -17,5 +17,18 @@
   "bugs": {
     "url": "https://github.com/MileyWright/Memory-Game/issues"
   },
-  "homepage": "https://github.com/MileyWright/Memory-Game#readme"
+  "homepage": "https://github.com/MileyWright/Memory-Game#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "knex": "^0.20.10",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.0",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2"
+  }
 }
