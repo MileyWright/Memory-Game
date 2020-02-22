@@ -1,0 +1,21 @@
+{
+  "name": "memory-game",
+  "version": "1.0.0",
+  "description": "Application that puts your memory to the test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js",
+    "start": "mode index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MileyWright/Memory-Game.git"
+  },
+  "author": "Miley Wright",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MileyWright/Memory-Game/issues"
+  },
+  "homepage": "https://github.com/MileyWright/Memory-Game#readme"
+}
