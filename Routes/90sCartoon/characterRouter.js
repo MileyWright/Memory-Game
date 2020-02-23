@@ -1,5 +1,5 @@
 const express = require('express');
-const cartoon = require('./cartoon-model');
+const cartoon = require('./character-model');
 const router = express.Router();
 
 // GET /90sCartoon character
