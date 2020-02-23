@@ -4,4 +4,6 @@ const db = require('../../config/dbConfig');
     get
  }
 
- 
+ function get() {
+     return db('Cartoon')
+ }
