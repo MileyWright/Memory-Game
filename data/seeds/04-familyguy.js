@@ -17,4 +17,5 @@ exports.seed = function(knex) {
         {id: 12, name: '', show: '', image: '', clicked: ''}
       ]);
     });
+    
 };
