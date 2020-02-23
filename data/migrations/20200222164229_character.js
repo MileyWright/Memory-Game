@@ -2,9 +2,6 @@
 exports.up = function(knex) {
     return knex.schema.createTable('Cartoon', cartoons => {
        cartoons.increments()
-       cartoons.string('name', 126)
-       .notNullable()
-       .unique();
        cartoons.string('show', 126)
        .notNullable();
        cartoons.string('image', 255)
@@ -48,7 +45,7 @@ exports.up = function(knex) {
         familyguy.boolean('clicked')
         .notNullable();
     }),
-    knex.schema.createTable('RickMorty', rickmorty => {
+    knex.schema.createTable('RicknMorty', rickmorty => {
         rickmorty.increments()
         rickmorty.string('name', 126)
         .notNullable()
@@ -62,7 +59,7 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTableIfExists('RickMorty'),
+  return knex.schema.dropTableIfExists('RicknMorty'),
   knex.schema.dropTableIfExists('FamilyGuy'),
   knex.schema.dropTableIfExists('Avengers'),
   knex.schema.dropTableIfExists('Anime'),
