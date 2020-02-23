@@ -2,7 +2,7 @@ const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
 
-const cartoonRouter = require('../Routes/90sCartoon/cartoonRouter');
+const cartoonRouter = require('../Routes/90sCartoon/characterRouter');
 // const animeRouter = require('');
 // const avengersRouter = require('');
 // const familyguyRouter = require('');
@@ -14,7 +14,7 @@ server.use(helmet());
 server.use(cors());
 server.use(express.json());
 
-server.use('/90sCartoon', cartoonRouter);
+server.use('/', cartoonRouter);
 // server.use('/anime', animeRouter);
 // server.use('/avengers', avengersRouter);
 // server.use('/familyguy', familyguyRouter);
