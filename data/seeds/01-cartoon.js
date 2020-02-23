@@ -1,10 +1,8 @@
 
 exports.seed = function(knex) {
-  // Deletes ALL existing entries
   return knex('Cartoon')
     .truncate()
     .then(function () {
-      // Inserts seed entries
       return knex('Cartoon').insert([
         {id: 1, show: 'Daria', image: 'https://pmctvline2.files.wordpress.com/2018/06/dara-reboot.jpg?w=620', clicked: 'false'},
         {id: 2, show: 'Rugrats', image: 'https://imgix.ranker.com/user_node_img/98/1948756/original/rugrats-photo-u14?w=650&q=50&fm=pjpg&fit=crop&crop=faces', clicked: 'false'},

@@ -1,9 +1,7 @@
 
 exports.seed = function(knex) {
-  // Deletes ALL existing entries
   return knex('Anime').del()
     .then(function () {
-      // Inserts seed entries
       return knex('Anime').insert([
         {id: 1, name: 'Goku', show: 'DragonBall Z', image: 'https://media.interaksyon.com/wp-content/uploads/2020/01/Son-Goku.jpg', clicked: 'false'},
         {id: 2, name: 'Monkey D. Luffy', show: 'One Piece', image: 'https://vignette.wikia.nocookie.net/fourworldwarfare/images/5/5f/Monkey_D._Luffy.png/revision/latest/scale-to-width-down/340?cb=20170210105537', clicked: 'false'},

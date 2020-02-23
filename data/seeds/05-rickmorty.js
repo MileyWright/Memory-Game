@@ -1,9 +1,7 @@
 
 exports.seed = function(knex) {
-  // Deletes ALL existing entries
   return knex('RicknMorty').del()
     .then(function () {
-      // Inserts seed entries
       return knex('RicknMorty').insert([
         {id: 1, name: '', show: '', image: '', clicked: ''},
         {id: 2, name: '', show: '', image: '', clicked: ''},
