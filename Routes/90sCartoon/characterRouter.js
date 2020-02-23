@@ -25,6 +25,9 @@ router.get('/anime', (req,res) => {
         res.status(500).json(err)
     })
 })
+//GET /
+ router.get('/', (req,res) => {
 
+ })
 
 module.exports = router;
