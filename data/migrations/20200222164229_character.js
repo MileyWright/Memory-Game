@@ -1,6 +1,7 @@
 
 exports.up = function(knex) {
-    return knex.schema.createTable('Cartoon', cartoons => {
+    return knex.schema
+    .createTable('Cartoon', cartoons => {
        cartoons.increments()
        cartoons.string('show', 126)
        .notNullable();
@@ -9,8 +10,8 @@ exports.up = function(knex) {
        .unique();
        cartoons.boolean('clicked')
        .notNullable();
-    }),
-    knex.schema.createTable('Anime', anime => {
+    })
+    .createTable('Anime', anime => {
         anime.increments()
         anime.string('name', 126)
         .notNullable()
@@ -22,8 +23,8 @@ exports.up = function(knex) {
         .unique();
         anime.boolean('clicked')
         .notNullable();
-    }),
-    knex.schema.createTable('Avengers', avengers => {
+    })
+    .createTable('Avengers', avengers => {
         avengers.increments()
         avengers.string('name', 126)
         .notNullable()
@@ -33,8 +34,8 @@ exports.up = function(knex) {
         .unique();
         avengers.boolean('clicked')
         .notNullable();
-    }),
-    knex.schema.createTable('FamilyGuy', familyguy => {
+    })
+    .createTable('FamilyGuy', familyguy => {
         familyguy.increments()
         familyguy.string('name', 126)
         .notNullable()
@@ -44,8 +45,8 @@ exports.up = function(knex) {
         .unique();
         familyguy.boolean('clicked')
         .notNullable();
-    }),
-    knex.schema.createTable('RicknMorty', rickmorty => {
+    })
+    .createTable('RicknMorty', rickmorty => {
         rickmorty.increments()
         rickmorty.string('name', 126)
         .notNullable()
@@ -59,9 +60,10 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTableIfExists('RicknMorty'),
-  knex.schema.dropTableIfExists('FamilyGuy'),
-  knex.schema.dropTableIfExists('Avengers'),
-  knex.schema.dropTableIfExists('Anime'),
-  knex.schema.dropTableIfExists('Cartoon')
+  return knex.schema
+    .dropTableIfExists('RicknMorty')
+    .dropTableIfExists('FamilyGuy')
+    .dropTableIfExists('Avengers')
+    .dropTableIfExists('Anime')
+    .dropTableIfExists('Cartoon')
 };
