@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
 
-class Cartoon extends Component {
-    render(){
+function Cartoon(props) {
+    console.log(props)
+   
         return(
-            <>
+            <div>
+            <h2>{props.cartoon}</h2>
             Cartoon here
-            </>
+            </div>
         )
-    }
+    
 }
 
 export default Cartoon;
