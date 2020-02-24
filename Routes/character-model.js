@@ -1,4 +1,4 @@
-const db = require('../../server/config/dbConfig');
+const db = require('../config/dbConfig');
 
  module.exports = {
     getCartoon,

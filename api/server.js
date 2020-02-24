@@ -2,7 +2,7 @@ const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
 
-const characterRouter = require('../Routes/90sCartoon/characterRouter');
+const characterRouter = require('../Routes/characterRouter');
 
 const server = express();
 
