@@ -8,6 +8,11 @@
     "server": "nodemon index.js",
     "start": "node index.js"
   },
+  "keywords": [
+    "node",
+    "express",
+    "api"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MileyWright/Memory-Game.git"
