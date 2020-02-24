@@ -1,15 +1,22 @@
 import React from 'react';
 import './App.css';
 import MainPage from './components/MainPage';
-import Navbar from './components/Navbar';
-
+import {Route} from 'react-router-dom';
+import Cartoon from './components/Categories/Cartoon';
+import 
 function App() {
+
+  
+
+  
+
   return (
     <div className="App">
-      <Navbar />
       <header className="App-header">
-        <MainPage/>
+        <Route exact path='/' component={MainPage}/>
+        <Route exact path='/90scartoon' component={Cartoon}/>
       </header>
+
     </div>
   );
 }
