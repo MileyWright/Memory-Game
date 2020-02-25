@@ -13,7 +13,6 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      cartoon: [],
       anime: [],
       avengers: [],
       familyguy: [],
@@ -22,17 +21,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('https://solidmemory.herokuapp.com/90sCartoon')
-    .then(res =>{ 
-      this.setState({
-        cartoon: res.data
-      })
-    console.log(res.data)
-    })
-    .catch(err => {
-      console.log("error:",err)
-    })
-
     axios.get('https://solidmemory.herokuapp.com/anime')
     .then(res =>{ 
       this.setState({
@@ -83,7 +71,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <Route exact path='/' component={MainPage}/>
-          <Route exact path='/90scartoon' render={props => <Cartoon {...props} cartoon={this.state.cartoon} /> }/>
+          <Route exact path='/90scartoon' component={Cartoon}/>
           <Route exact path='/anime' render={props => <Anime {...props} anime={this.state.anime} /> }/>
           <Route exact path='/avengers' render={props => <Avengers {...props} avengers={this.state.avengers} /> }/>
           <Route exact path='/familyguy' render={props => <FamilyGuy {...props} familyguy={this.state.familyguy} /> }/>
