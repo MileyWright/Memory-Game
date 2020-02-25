@@ -10,7 +10,7 @@ class Cartoon extends Component {
             cartoon: [],
             highScore: 0,
             currentScore: 0,
-            clicked: false
+            clicked: 0
         }
     }
 
@@ -32,18 +32,18 @@ class Cartoon extends Component {
 
     handleScore = id => {
         this.state.cartoon.forEach(item => {
-            if (id === item.id && item.clicked === false) {
-                item.clicked = true;
-                this.setState({Clicked: false});
+            if (id === item.id && item.clicked === 0) {
+                item.clicked = 1;
+                this.setState({clicked: 0});
                 this.handleIncrement();
-            } else if ( id === item.id && item.clicked === true) {
+            } else if ( id === item.id && item.clicked === 1) {
                 if (this.state.currentScore > this.state.highScore) {
                     this.setState({highScore: this.state.currentScore});
                 }
                 this.setState({currentScore: 0});
-                this.setState({Clicked: true});
+                this.setState({clicked: 1});
                 this.state.cartoon.forEach(item =>
-                    (item.clicked = false)
+                    (item.clicked = 0)
                 )
             }
         });
@@ -56,7 +56,7 @@ class Cartoon extends Component {
     };
 
     handleIncrement = () => {
-        this.setState({currentScore: this.state.currentScore + 1})
+        this.setState({currentScore: this.state.currentScore + 1});
     };
 
     //function that takes an array as a parameter and shuffles it
@@ -85,8 +85,11 @@ class Cartoon extends Component {
     render(){
         return(
             <div>
-                <Navbar/>
-                Cartoon here
+                <Navbar
+                     currentScore={this.state.currentScore}
+                     highScore={this.state.highScore}
+                     title= "90s Cartoons"
+                />
                 {this.state.cartoon.map(character => (
                 <CharacterCard
                         clicked={this.state.clicked}
