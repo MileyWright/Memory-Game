@@ -5,7 +5,7 @@ exports.seed = function(knex) {
       return knex('Anime').insert([
         {id: 1, name: 'Goku', show: 'DragonBall Z', image: 'https://media.interaksyon.com/wp-content/uploads/2020/01/Son-Goku.jpg', clicked: false},
         {id: 2, name: 'Monkey D. Luffy', show: 'One Piece', image: 'https://vignette.wikia.nocookie.net/fourworldwarfare/images/5/5f/Monkey_D._Luffy.png/revision/latest/scale-to-width-down/340?cb=20170210105537', clicked: false},
-        {id: 3, name: 'Naruto Uzumaki1', show: 'Naruto', image: 'https://newamericanjackets.b-cdn.net/wp-content/uploads/2019/03/Naruto-orange-and-black-jacket-600x800.jpg', clicked: false},
+        {id: 3, name: 'Naruto Uzumaki', show: 'Naruto', image: 'https://newamericanjackets.b-cdn.net/wp-content/uploads/2019/03/Naruto-orange-and-black-jacket-600x800.jpg', clicked: false},
         {id: 4, name: 'Ichigo Kurosaki', show: 'Bleach', image: 'https://sites.google.com/site/bleach2000yourguidetoitsseries/_/rsrc/1415924189907/home/characters/subcategories/shinigami-captains/ichigo-kurosaki/Ichigo%20Kurosaki.jpg?height=1094&width=1933', clicked: false},
         {id: 5, name: 'Izuku Midoriya', show: 'My Hero Academia', image: 'https://qph.fs.quoracdn.net/main-qimg-d69406383d8106d2b9f257594aaeefb6', clicked: false},
         {id: 6, name: 'Lelouch Lamperouge', show: 'Code Geass', image: 'https://cdn1.i-scmp.com/sites/default/files/styles/768x768/public/images/methode/2018/06/05/5fc60a38-689f-11e8-8f2e-7970b9e180c8_1280x720_180423.jpg?itok=VGeQha8M', clicked: false},
