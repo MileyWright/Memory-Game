@@ -3,11 +3,11 @@ import axios from 'axios';
 import Navbar from '../Navbar';
 import CharacterCard from '../CharacterCard';
 
-class Cartoon extends Component {
+class Anime extends Component {
     constructor(){
         super();
         this.state = {
-            cartoon: [],
+            anime: [],
             highScore: 0,
             currentScore: 0,
             clicked: 0
@@ -15,10 +15,10 @@ class Cartoon extends Component {
     }
 
     componentDidMount(){
-        axios.get('https://solidmemory.herokuapp.com/90sCartoon')
+        axios.get('https://solidmemory.herokuapp.com/anime')
         .then(res =>{ 
           this.setState({
-            cartoon: res.data
+            anime: res.data
           })
         console.log(res.data)
         })
@@ -31,7 +31,7 @@ class Cartoon extends Component {
     }
 
     handleScore = id => {
-        this.state.cartoon.forEach(item => {
+        this.state.anime.forEach(item => {
             if (id === item.id && item.clicked === 0) {
                 item.clicked = 1;
                 this.setState({clicked: 0});
@@ -42,7 +42,7 @@ class Cartoon extends Component {
                 }
                 this.setState({currentScore: 0});
                 this.setState({clicked: 1});
-                this.state.cartoon.forEach(item =>
+                this.state.anime.forEach(item =>
                     (item.clicked = 0)
                 )
             }
@@ -51,7 +51,7 @@ class Cartoon extends Component {
 
     shuffleArray = () => {
         //shuffles the array of objects
-        const shuffledArr = this.shuffle(this.state.cartoon);
+        const shuffledArr = this.shuffle(this.state.anime);
         this.setState({shuffledArr});
     };
 
@@ -88,9 +88,9 @@ class Cartoon extends Component {
                 <Navbar
                      currentScore={this.state.currentScore}
                      highScore={this.state.highScore}
-                     title= "90s Cartoons"
+                     title= "Anime"
                 />
-                {this.state.cartoon.map(character => (
+                {this.state.anime.map(character => (
                 <CharacterCard
                         clicked={this.state.clicked}
                         handleClick={this.handleClick}
@@ -105,4 +105,4 @@ class Cartoon extends Component {
     }
 }
 
-export default Cartoon;
+export default Anime;
