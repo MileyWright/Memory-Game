@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import Navbar from './Navbar';
 
 class MainPage extends Component {
 
     render(){
         return(
             <>
+            <Navbar title={"Soild Memory"}/>
             <Link to='/90scartoon'>
                 <button>90s Cartoons</button>
             </Link>
@@ -13,7 +15,7 @@ class MainPage extends Component {
                 <button>Anime</button>
             </Link>
             <Link to='/avengers'>
-                <button>Advengers</button>
+                <button>Avengers</button>
             </Link>
             <Link to='/familyguy'>
                 <button>Family Guy</button>
