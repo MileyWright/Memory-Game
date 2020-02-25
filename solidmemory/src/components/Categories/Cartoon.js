@@ -85,21 +85,21 @@ class Cartoon extends Component {
     render(){
         return(
             <div>
-           <Navbar/>
-            Cartoon here
-           {this.state.cartoon.map(character => (
-               <CharacterCard
-                    Clicked={this.state.clicked}
-                    handleClick={this.handleClick}
-                    name={character.show}
-                    id={character.id}
-                    key={character.id}
-                    image={character.image}
-               />
-           ))}
+                <Navbar/>
+                Cartoon here
+                {this.state.cartoon.map(character => (
+                <CharacterCard
+                        clicked={this.state.clicked}
+                        handleClick={this.handleClick}
+                        name={character.show}
+                        id={character.id}
+                        key={character.id}
+                        image={character.image}
+                />
+                ))}
             </div>
         )
-        }
+    }
 }
 
 export default Cartoon;
