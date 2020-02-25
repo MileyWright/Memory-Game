@@ -28,7 +28,7 @@ router.get('/anime', (req,res) => {
 
 // GET /avengers character
 router.get('/avengers', (req,res) => {
-    db.getAvengers()
+    db.getAvenger()
     .then(anime => {
         res.status(200).json(anime)
     })

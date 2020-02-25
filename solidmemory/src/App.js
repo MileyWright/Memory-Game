@@ -43,6 +43,17 @@ class App extends Component {
     .catch(err => {
       console.log("error:",err)
     })
+
+    axios.get('https://solidmemory.herokuapp.com/avengers')
+    .then(res =>{ 
+      this.setState({
+        avengers: res.data
+      })
+    console.log(res.data)
+    })
+    .catch(err => {
+      console.log("error:",err)
+    })
   }
 
   render(){
@@ -52,7 +63,7 @@ class App extends Component {
           <Route exact path='/' component={MainPage}/>
     <Route exact path='/90scartoon' render={props => <Cartoon {...props} cartoon={this.state.cartoon} /> }/>
           <Route exact path='/anime' render={props => <Anime {...props} anime={this.state.anime} /> }/>
-          <Route exact path='/avengers' component={Avengers}/>
+          <Route exact path='/avengers' render={props => <Avengers {...props} anime={this.state.avengers} /> }/>
           <Route exact path='/familyguy' component={FamilyGuy}/>
           <Route exact path='/ricknmorty' component={RicknMorty}/>
 
