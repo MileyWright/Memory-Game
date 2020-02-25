@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import axios from 'axios';
 import MainPage from './components/MainPage';
 import {Route} from 'react-router-dom';
 import Cartoon from './components/Categories/Cartoon';
@@ -12,16 +13,18 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      cartoon: []
+      cartoon: [],
+      
     }
   }
 
-  conmponentDidMount() {
-    fetch('https://solidmemory.herokuapp.com/90sCartoon')
-    .then(res => res.json())
-    .then(res => {
-      this.setState({cartoon: res})
-      console.log(res)
+  componentDidMount() {
+    axios.get('https://solidmemory.herokuapp.com/90sCartoon')
+    .then(res =>{ 
+      this.setState({
+        cartoon: res.data
+      })
+    console.log(res.data)
     })
     .catch(err => {
       console.log("error:",err)

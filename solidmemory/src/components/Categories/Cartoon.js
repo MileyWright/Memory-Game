@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 
 function Cartoon(props) {
-    console.log(props)
+    console.log(`props`,props)
    
         return(
             <div>
-            <h2>{props.cartoon}</h2>
+           
             Cartoon here
             </div>
         )
