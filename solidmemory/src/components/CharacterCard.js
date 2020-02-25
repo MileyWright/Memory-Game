@@ -7,11 +7,7 @@ function CharacterCard(props) {
                 <img alt={props.name} src={props.image} />
             </div>
             <div className='imgContent'>
-                <ul>
-                    <li>
-                        <strong>Show:</strong>{props.name}
-                    </li>
-                </ul>
+                <strong>Show: </strong>{props.name}
             </div>
         </div>
     )
