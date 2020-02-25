@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import Navbar from '../Navbar';
 import CharacterCard from '../CharacterCard';
+import Wrapper from '../Wrapper';
 
 class Anime extends Component {
     constructor(){
@@ -84,7 +85,7 @@ class Anime extends Component {
 
     render(){
         return(
-            <div className='wrapper'>
+            <Wrapper>
                 <Navbar
                      currentScore={this.state.currentScore}
                      highScore={this.state.highScore}
@@ -94,13 +95,14 @@ class Anime extends Component {
                 <CharacterCard
                         clicked={this.state.clicked}
                         handleClick={this.handleClick}
-                        name={character.show}
+                        name={character.name}
+                        show={character.show}
                         id={character.id}
                         key={character.id}
                         image={character.image}
                 />
                 ))}
-            </div>
+            </Wrapper>
         )
     }
 }

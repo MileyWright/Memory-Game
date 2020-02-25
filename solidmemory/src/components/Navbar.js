@@ -8,7 +8,6 @@ function Navbar(props) {
                 <nav className="col-sm-4">
                     <p>Score: <span>{props.currentScore}</span></p>
                     <p>Top Score: <span>{props.highScore}</span> </p>
-                    {props.children}
                 </nav>
                 </div>
             </header>
