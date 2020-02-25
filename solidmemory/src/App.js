@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import axios from 'axios';
 import MainPage from './components/MainPage';
 import {Route} from 'react-router-dom';
 import Cartoon from './components/Categories/Cartoon';

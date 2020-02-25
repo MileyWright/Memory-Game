@@ -84,7 +84,7 @@ class Anime extends Component {
 
     render(){
         return(
-            <div>
+            <div className='wrapper'>
                 <Navbar
                      currentScore={this.state.currentScore}
                      highScore={this.state.highScore}
