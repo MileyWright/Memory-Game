@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import Navbar from '../Navbar';
+import CharacterCard from '../CharacterCard';
+
 class Cartoon extends Component {
     constructor(){
         super();
@@ -7,7 +10,7 @@ class Cartoon extends Component {
             cartoon: [],
             highScore: 0,
             currentScore: 0,
-            Clicked: false
+            clicked: false
         }
     }
 
@@ -82,8 +85,18 @@ class Cartoon extends Component {
     render(){
         return(
             <div>
-           
+           <Navbar/>
             Cartoon here
+           {this.state.cartoon.map(character => (
+               <CharacterCard
+                    Clicked={this.state.clicked}
+                    handleClick={this.handleClick}
+                    name={character.show}
+                    id={character.id}
+                    key={character.id}
+                    image={character.image}
+               />
+           ))}
             </div>
         )
         }
