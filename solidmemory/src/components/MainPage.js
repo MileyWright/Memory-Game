@@ -6,10 +6,11 @@ class MainPage extends Component {
 
     render(){
         return(
-            <>
+            <div className='mainpage'>
             <Navbar title={"Soild Memory"}/>
+            <div className='categoryContainer'>
             <Link to='/90scartoon'>
-                <button>90s Cartoons</button>
+                <button className='cartoon'>90s Cartoons</button>
             </Link>
             <Link to='/anime'>
                 <button>Anime</button>
@@ -23,7 +24,8 @@ class MainPage extends Component {
             <Link to='/ricknmorty'>
                 <button>Rick n Morty</button>
             </Link>
-            </>
+            </div>
+            </div>
         )
     }
 }
