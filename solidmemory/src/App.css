@@ -14,19 +14,40 @@ header {
   background: linear-gradient(to left top,darkgrey, white) center center fixed;
   margin-bottom: 1px;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-  /* color: white; */
   width: 100%;
 }
 
 header h1 {
   font-size: 30px;
-  margin-left: 1%;
+  margin-top: -2%;
+  margin-left: 2%;
 }
 
 header nav {
   display: flex;
   justify-content: flex-end;
 }
+
+ header .navbutton{
+  display: flex;
+  justify-content: flex-end;
+  margin: 14px;
+ }
+
+ header button{
+  width: 70px;
+  height: 30px;
+  background: none;
+  border-radius: 5px;
+  border: 1px solid gray;
+  cursor: pointer;
+  text-shadow: 0.25px 0.25px 0.25px #000000;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+ }
+
+ header button:hover{
+  box-shadow: 0 6px 7px rgb(150, 150, 150), 0 6px 7px rgb(150, 150, 150);
+ }
 
 header p {
   font-weight: bold;
@@ -70,8 +91,13 @@ header p {
 .mainpage{
   height: 100vh;
 }
+
+.mainpage .p{
+  text-align: center;
+  margin: 2%;
+}
 .categoryContainer{
-  margin:6%;
+  margin:1% 5%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -80,7 +106,7 @@ header p {
 .categoryContainer button{
   width: 400px;
   height: 100px;
-  margin: 4px;
+  margin: 5px;
   border: none;
   border-radius: 4px;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
@@ -89,7 +115,7 @@ header p {
 
 }
 .categoryContainer button:hover{
-  box-shadow: 0 12px 24px #999, 0 12px 24px #999;
+  box-shadow: 0 12px 24px rgb(150, 150, 150), 0 12px 24px rgb(150, 150, 150);
   height: 150px;
   width: 250;
   transition: height 0.8s ease-in;
@@ -103,6 +129,30 @@ header p {
   color: black;
   font-size: 1.8rem;
 }
+
+.categoryContainer .anime{
+  background-image: url('https://img-9gag-fun.9cache.com/photo/aYwzLAN_700bwp.webp');
+  background-position: center;
+}
+
+.categoryContainer .avengers{
+  background-image: url('https://static2.cbrimages.com/wordpress/wp-content/uploads/2019/08/avengers-endgame-group-header.jpg');
+  background-position: center;
+  background-size: 90%;
+}
+
+.categoryContainer .familyguy{
+  background-image: url('https://www.tvovermind.com/wp-content/uploads/2019/02/family-guy-300th-episode-please-send-in-stewie-extended-episode-1071797.jpeg');
+  background-position: center;
+  background-size: 99%;
+}
+
+.categoryContainer .ricknmorty{
+  background-image: url('https://1.bp.blogspot.com/-MqAaujbA00M/W0vPdFLp8jI/AAAAAAAAHug/oen0HzB02Dw9w8mUOX28kHsZpxKg4tx7QCLcBGAs/s640/Rick%2B%2526%2BMorty.jpg');
+  background-position: center;
+  background-size: 80%;
+}
+
 .card {
   background: #fff;
   border: 5px solid #fff;
@@ -118,8 +168,7 @@ header p {
 
 .card:hover {
   box-shadow: 0 12px 24px #999, 0 12px 24px #999;
-  height: 300px;
-  width: 250;
+
 }
 
 .card>.imgContainer {

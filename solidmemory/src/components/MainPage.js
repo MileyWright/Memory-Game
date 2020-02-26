@@ -7,22 +7,23 @@ class MainPage extends Component {
     render(){
         return(
             <div className='mainpage'>
-            <Navbar title={"Soild Memory"}/>
+            <Navbar title={"Solid Memory"}/>
+            <p className='p'>Choose a category and put your memory to the test. </p>
             <div className='categoryContainer'>
             <Link to='/90scartoon'>
-                <button className='cartoon'>90s Cartoons</button>
+                <button className='cartoon'></button>
             </Link>
             <Link to='/anime'>
-                <button>Anime</button>
+                <button className='anime'></button>
             </Link>
             <Link to='/avengers'>
-                <button>Avengers</button>
+                <button className='avengers'></button>
             </Link>
             <Link to='/familyguy'>
-                <button>Family Guy</button>
+                <button className='familyguy'></button>
             </Link>
             <Link to='/ricknmorty'>
-                <button>Rick n Morty</button>
+                <button className='ricknmorty'></button>
             </Link>
             </div>
             </div>
