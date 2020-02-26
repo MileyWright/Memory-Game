@@ -7,7 +7,7 @@ class RicknMorty extends Component {
     constructor(){
         super();
         this.state = {
-            cartoon: [],
+            ricknmorty: [],
             highScore: 0,
             currentScore: 0,
             clicked: 0
@@ -15,10 +15,10 @@ class RicknMorty extends Component {
     }
 
     componentDidMount(){
-        axios.get('https://solidmemory.herokuapp.com/90sCartoon')
+        axios.get('https://solidmemory.herokuapp.com/ricknmorty')
         .then(res =>{ 
           this.setState({
-            cartoon: res.data
+            ricknmorty: res.data
           })
         console.log(res.data)
         })
@@ -31,7 +31,7 @@ class RicknMorty extends Component {
     }
 
     handleScore = id => {
-        this.state.cartoon.forEach(item => {
+        this.state.ricknmorty.forEach(item => {
             if (id === item.id && item.clicked === 0) {
                 item.clicked = 1;
                 this.setState({clicked: 0});
@@ -42,7 +42,7 @@ class RicknMorty extends Component {
                 }
                 this.setState({currentScore: 0});
                 this.setState({clicked: 1});
-                this.state.cartoon.forEach(item =>
+                this.state.ricknmorty.forEach(item =>
                     (item.clicked = 0)
                 )
             }
@@ -51,7 +51,7 @@ class RicknMorty extends Component {
 
     shuffleArray = () => {
         //shuffles the array of objects
-        const shuffledArr = this.shuffle(this.state.cartoon);
+        const shuffledArr = this.shuffle(this.state.ricknmorty);
         this.setState({shuffledArr});
     };
 
@@ -88,13 +88,13 @@ class RicknMorty extends Component {
                 <Navbar
                      currentScore={this.state.currentScore}
                      highScore={this.state.highScore}
-                     title= "90s Cartoons"
+                     title= "Rick n Morty"
                 />
-                {this.state.cartoon.map(character => (
+                {this.state.ricknmorty.map(character => (
                 <CharacterCard
                         clicked={this.state.clicked}
                         handleClick={this.handleClick}
-                        name={character.show}
+                        name={character.name}
                         id={character.id}
                         key={character.id}
                         image={character.image}
